@@ -41,7 +41,7 @@ int write_command(const char *command) {
   size_t total = strlen(command);
   while (sent < total) {
     size_t remaining = total - sent;
-    ViStatus code = viWrite(instrument, (ViConstBuf) (command + sent), (ViUInt32) remaining, &io_bytes);
+    ViStatus code = viWrite(instrument, (ViBuf) (command + sent), (ViUInt32) remaining, &io_bytes);
     if (code < VI_SUCCESS) {
       return code;
     }
