@@ -16,7 +16,7 @@ void usage() {
 int parse_args(int argc, char **argv, config *result) {
   memset(result, 0, sizeof(config));
   int dopt;
-  while ((dopt = getopt(argc, argv, "hr:tc:f")) != EOF) {
+  while ((dopt = getopt(argc, argv, "hr:t:c:f:")) != EOF) {
     switch (dopt) {
       case 'h':
         usage();
