@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 
 project(visa-data)
 
-find_library(VISA NAMES VISA REQUIRED)
+find_library(VISA NAMES VISA visa REQUIRED)
 if(APPLE)
     include_directories(${VISA}/Headers)
 endif ()
