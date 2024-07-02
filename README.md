@@ -1,5 +1,6 @@
 ## About
-Save data from the instrument using VISA library
+
+Save currently displayed data from the instrument into .csv file.
 
 ## Prerequisites
 
@@ -12,4 +13,18 @@ mkdir build
 cd build
 cmake ..
 make
+```
+
+## Run
+
+Show help:
+
+```c
+./main -h
+```
+
+Example command:
+
+```
+./main -r "USB0::0x1AB1::0x04CE::DS1ZA253502774::INSTR" -c 2,4 -f ff_9mhz
 ```
